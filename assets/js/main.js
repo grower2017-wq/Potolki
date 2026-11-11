@@ -374,8 +374,17 @@
   function initReviews() {
     var box = $('#reviews-embed'); if (!box) return;
     var rv = $('#reviews');
-    if (has(C.yandexReviewsEmbed)) {
-      box.innerHTML = '<iframe src="' + esc(C.yandexReviewsEmbed) + '" title="Отзывы о компании в Яндексе" loading="lazy"></iframe>';
+    var w = C.reviewsWidget;
+    if (w && has(w.app)) {
+      box.innerHTML = '';
+      var div = document.createElement('div');
+      div.className = 'sw-app';
+      div.setAttribute('data-app', w.app);
+      div.setAttribute('data-sw-type', w.type || 'review_yandex_uslugi');
+      box.appendChild(div);
+      var sc = document.createElement('script');
+      sc.src = 'https://res.smartwidgets.ru/app.js'; sc.async = true;
+      box.appendChild(sc);
     } else if (!C.showDevNotes) {
       box.remove();
       rv.style.gridTemplateColumns = '1fr';

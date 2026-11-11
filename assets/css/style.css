@@ -974,3 +974,20 @@ svg.ico--fill { fill: currentColor; stroke: none; }
 .consent input:focus-visible { outline: 2px solid var(--accent); outline-offset: 2px; }
 
 @media (max-width: 559px) { .work__img { aspect-ratio: 1 / 1; } }
+
+/* ---------- Цены по материалам, мастера ---------- */
+.type-card__price { white-space: pre-line; line-height: 1.6; }
+
+.materials { display: grid; gap: 16px; margin-top: 16px; }
+.material { padding: 26px; border: 1px solid var(--line); border-radius: var(--radius); background: var(--card); display: flex; flex-direction: column; gap: 12px; }
+.material p { color: var(--muted); font-size: 15px; }
+.material dl { margin: 6px 0 0; display: grid; grid-template-columns: 1fr 1fr; gap: 12px; }
+.material dt { font-family: var(--font-mono); font-size: 11px; letter-spacing: .12em; text-transform: uppercase; color: var(--muted); }
+.material dd { margin: 4px 0 0; font-family: var(--font-head); font-weight: 300; font-size: clamp(18px, 2.6vw, 24px); letter-spacing: -.03em; color: var(--accent); }
+@media (min-width: 760px) { .materials { grid-template-columns: 1fr 1fr; } }
+
+.team-grid { max-width: 720px; }
+.team-grid .master__img { aspect-ratio: 4 / 5; }
+.team-grid .master__img img { object-position: 50% 20%; }
+.reviews__embed { min-width: 0; }
+@media (min-width: 760px) { .team-grid { grid-template-columns: repeat(2, minmax(0, 1fr)); max-width: 680px; gap: 24px; } }

@@ -16,12 +16,12 @@ window.SITE_CONFIG = {
   address: '',            // адрес (если нужен в подвале и в политике)
 
   /* --- Контакты --- */
-  phone: '',              // формат: '+7 (495) 000-00-00'
-  email: '',              // публичная почта для подвала (не обязательно)
+  phone: '+7 (926) 011-12-19',
+  email: 'gildiyapotolkov@yandex.ru',
   links: {
-    max: '',              // ссылка на MAX, например https://max.ru/...
-    telegram: '',         // https://t.me/...
-    whatsapp: '',         // https://wa.me/79990000000
+    max: 'https://max.ru/u/f9LHodD0cOK-lZMrLCe6M-L3aVLGM1I8D1TIV0CW3iahtjEviPU8lbPH3g0',
+    telegram: 'https://t.me/Ivaniow',
+    whatsapp: 'https://api.whatsapp.com/send?phone=79260111219',
     vk: '',               // https://vk.com/...
     yandexReviews: ''     // ссылка на карточку компании в Яндекс Отзывах
   },
@@ -36,11 +36,16 @@ window.SITE_CONFIG = {
 
   /* Цена «от … ₽/м²» по видам потолков. Пустое значение = строка с ценой не показывается. */
   typePrices: {
-    matte: '', gloss: '', satin: '', fabric: '', twolevel: '', floating: '', stars: ''
+    matte: 'Материал от 200 ₽/м²\nУстановка от 1500 ₽/м²',
+    gloss: 'Материал от 200 ₽/м²\nУстановка от 1500 ₽/м²',
+    satin: 'Материал от 200 ₽/м²\nУстановка от 1500 ₽/м²',
+    fabric: 'Материал от 800 ₽/м²\nУстановка от 2000 ₽/м²',
+    twolevel: '', floating: '', stars: ''
   },
 
   /* --- Яндекс Отзывы --- */
-  yandexReviewsEmbed: '',   // адрес (src) iframe-виджета отзывов
+  /* Виджет отзывов (сервис smartwidgets.ru). Чтобы убрать — оставьте app пустым. */
+  reviewsWidget: { app: '4e29d2676eaa4d1c6387078f866b35cf', type: 'review_yandex_uslugi' },
 
   /* --- Видео с ТВ --- */
   tvVideo: {
@@ -51,7 +56,10 @@ window.SITE_CONFIG = {
 
   /* --- Мастера (фото монтажников) ---
      Пример: { photo: 'masters/ivan.jpg', name: 'Иван', role: 'Мастер по монтажу' } */
-  masters: [],
+  masters: [
+    { photo: 'assets/img/masters/master1.webp', name: '', role: 'Мастер по монтажу' },
+    { photo: 'assets/img/masters/master2.webp', name: '', role: 'Мастер по монтажу' }
+  ],
 
   /* Фото в блоке «Замер». Лучше заменить на фото мастера с образцами полотен. */
   measurePhoto: 'portfolio/5447264050829009542.jpg',
