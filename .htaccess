@@ -30,9 +30,12 @@ Options -Indexes
   ExpiresByType application/javascript "access plus 1 week"
 </IfModule>
 
-# Принудительный HTTPS: уберите «#» в начале строк, когда на домене включён SSL-сертификат.
-# <IfModule mod_rewrite.c>
-#   RewriteEngine On
-#   RewriteCond %{HTTPS} off
-#   RewriteRule ^ https://%{HTTP_HOST}%{REQUEST_URI} [L,R=301]
-# </IfModule>
+# Принудительный HTTPS: все обращения по http:// переводятся на https://
+# Если сайт перестал открываться (ошибка «слишком много перенаправлений»), удалите этот блок
+# и включите перенаправление на HTTPS в панели хостинга.
+<IfModule mod_rewrite.c>
+  RewriteEngine On
+  RewriteCond %{HTTPS} off
+  RewriteCond %{HTTP:X-Forwarded-Proto} !https
+  RewriteRule ^ https://%{HTTP_HOST}%{REQUEST_URI} [L,R=301]
+</IfModule>
