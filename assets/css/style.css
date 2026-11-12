@@ -1060,3 +1060,19 @@ svg.ico--fill { fill: currentColor; stroke: none; }
 .fab__menu .fab__item.msg-btn { display: inline-grid; }
 
 #reviews-section .reviews { margin-top: 0; }
+
+/* ---------- Акция одна: карточка во всю ширину ---------- */
+.promos { grid-template-columns: 1fr; }
+.promo--gift { flex-direction: column; align-items: flex-start; gap: 18px; padding: 28px 26px; }
+.promo__ico {
+  width: 64px; height: 64px; border-radius: 18px; display: grid; place-items: center; flex: none;
+  background: var(--warm); color: #2a1d06;
+}
+.promo__ico svg { width: 30px; height: 30px; }
+.promo__body { display: grid; gap: 10px; min-width: 0; }
+.promo__body p { max-width: 58ch; }
+@media (min-width: 760px) {
+  .promo--gift { flex-direction: row; align-items: center; gap: 28px; padding: 32px 36px; }
+  .promo--gift .btn { margin-left: auto; }
+  .promo__body { flex: 1; }
+}
