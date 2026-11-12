@@ -997,3 +997,66 @@ svg.ico--fill { fill: currentColor; stroke: none; }
 .ico-msg--sm { width: 20px; height: 20px; }
 .contact-link .ico-msg { width: 30px; height: 30px; }
 .fab__menu a .ico-msg { width: 20px; height: 20px; }
+
+/* ---------- Иконки мессенджеров: кнопки без текста ---------- */
+.msg-btn {
+  display: inline-grid; place-items: center; flex: none; border-radius: 50%;
+  box-shadow: 0 0 0 1px var(--line-2); transition: transform .2s, box-shadow .2s;
+}
+.msg-btn img { width: 100%; height: 100%; border-radius: 50%; display: block; }
+.msg-btn:hover { transform: translateY(-2px) scale(1.06); box-shadow: 0 0 0 1px var(--accent), 0 10px 26px rgba(0, 0, 0, .5); }
+.msg-btn--header { width: 40px; height: 40px; }
+.msg-btn--md { width: 48px; height: 48px; }
+.msg-btn--lg { width: 60px; height: 60px; }
+.msg-row { display: flex; align-items: center; gap: 12px; flex-wrap: wrap; }
+.msg-row--menu { margin-top: 22px; gap: 14px; }
+
+.header__msgs { display: none; align-items: center; gap: 10px; }
+@media (min-width: 1080px) { .header__msgs { display: flex; } }
+@media (min-width: 1080px) and (max-width: 1279px) {
+  .header__phone { font-size: 12px; }
+  .nav ul { gap: 14px; }
+  .header__actions { gap: 8px; }
+}
+
+/* Первый экран: телефон и иконки */
+.hero__contacts {
+  display: flex; align-items: center; gap: 18px; flex-wrap: wrap;
+  width: fit-content; max-width: 100%; padding: 12px 18px 12px 22px;
+  border: 1px solid var(--line-2); border-radius: 999px; background: rgba(255, 255, 255, .03);
+}
+.hero__phone {
+  display: inline-flex; align-items: center; gap: 12px; text-decoration: none; color: var(--text);
+  font-family: var(--font-head); font-weight: 300; font-size: clamp(18px, 4.8vw, 24px); letter-spacing: -.02em; white-space: nowrap;
+}
+.hero__phone svg { width: 22px; height: 22px; color: var(--accent); flex: none; }
+.hero__phone:hover { color: var(--accent); }
+.hero__contacts-sep { width: 1px; height: 34px; background: var(--line-2); }
+@media (max-width: 559px) {
+  .hero__contacts { border-radius: 22px; padding: 16px 18px; gap: 14px; }
+  .hero__contacts-sep { display: none; }
+}
+@media (min-width: 560px) { .benefits .benefit:last-child:nth-child(3) { grid-column: 1 / -1; } }
+
+/* Блок контактов внизу */
+.contact-box { display: grid; gap: 26px; max-width: 460px; }
+.contact-phone, .contact-mail { display: block; text-decoration: none; }
+.contact-phone small, .contact-mail small {
+  display: block; margin-bottom: 6px; font-family: var(--font-mono); font-size: 10px; letter-spacing: .16em; text-transform: uppercase; color: var(--muted);
+}
+.contact-phone b { display: block; font-family: var(--font-head); font-weight: 300; font-size: clamp(26px, 6vw, 38px); letter-spacing: -.03em; color: var(--accent); }
+.contact-phone:hover b { color: var(--accent-2); }
+.contact-mail b { font-weight: 600; font-size: 16px; overflow-wrap: anywhere; }
+.contact-mail:hover b { color: var(--accent); }
+
+/* Плавающее меню связи: только иконки */
+.fab__menu { display: flex; flex-direction: column; align-items: center; gap: 10px; padding: 10px; min-width: 0; border-radius: 32px; }
+.fab__menu .fab__item { width: 48px; height: 48px; padding: 0; gap: 0; border-radius: 50%; display: grid; place-items: center; }
+.fab__menu .fab__item:hover { background: none; }
+.fab__menu .fab__item--phone, .fab__menu .fab__item--calc { background: var(--accent); color: var(--accent-ink); }
+.fab__menu .fab__item--phone:hover, .fab__menu .fab__item--calc:hover { background: var(--accent-2); }
+.fab__menu .fab__item svg { width: 22px; height: 22px; color: inherit; }
+.fab__menu .fab__item img { width: 100%; height: 100%; }
+.fab__menu .fab__item.msg-btn { display: inline-grid; }
+
+#reviews-section .reviews { margin-top: 0; }

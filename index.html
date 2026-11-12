@@ -62,16 +62,16 @@
     <nav class="nav" aria-label="Основное меню">
       <ul>
         <li><a href="#types">Виды потолков</a></li>
-        <li><a href="#price">Цена</a></li>
         <li><a href="#measure">Замер</a></li>
-        <li><a href="#guarantee">Гарантии</a></li>
         <li><a href="#works">Работы</a></li>
+        <li><a href="#price">Цена</a></li>
+        <li><a href="#guarantee">Гарантии</a></li>
       </ul>
     </nav>
 
     <div class="header__actions">
       <a class="header__phone" data-link="phone" hidden></a>
-      <a class="btn btn--sm header__max" data-link="max" target="_blank" rel="noopener" hidden><img class="ico-msg ico-msg--sm" src="assets/img/icons/max.webp" width="20" height="20" alt="">Написать в MAX</a>
+      <div class="header__msgs"><a class="msg-btn msg-btn--header" data-link="max" target="_blank" rel="noopener" aria-label="MAX" title="MAX" hidden><img src="assets/img/icons/max.webp" width="56" height="56" alt=""></a><a class="msg-btn msg-btn--header" data-link="telegram" target="_blank" rel="noopener" aria-label="Telegram" title="Telegram" hidden><img src="assets/img/icons/telegram.webp" width="56" height="56" alt=""></a><a class="msg-btn msg-btn--header" data-link="whatsapp" target="_blank" rel="noopener" aria-label="WhatsApp" title="WhatsApp" hidden><img src="assets/img/icons/whatsapp.webp" width="56" height="56" alt=""></a></div>
       <a class="btn btn--sm btn--primary" href="#quiz" data-cta-fallback>Рассчитать</a>
       <a class="btn btn--sm header__call-mobile" data-link="phone" hidden aria-label="Позвонить">
         <svg class="ico" aria-hidden="true"><use href="#i-phone"/></svg><span>Позвонить</span>
@@ -83,15 +83,16 @@
 
 <div class="mobile-menu" id="mobile-menu">
   <a class="mm-link" href="#types">Виды потолков</a>
-  <a class="mm-link" href="#price">Цена</a>
   <a class="mm-link" href="#measure">Замер</a>
-  <a class="mm-link" href="#guarantee">Гарантии</a>
   <a class="mm-link" href="#works">Работы</a>
+  <a class="mm-link" href="#reviews-section">Отзывы</a>
+  <a class="mm-link" href="#price">Цена</a>
+  <a class="mm-link" href="#guarantee">Гарантии</a>
   <a class="mm-link" href="#video">Видео</a>
   <a class="mm-link" href="#faq">Частые сомнения</a>
   <a class="btn btn--primary btn--block" href="#quiz">Рассчитать стоимость</a>
   <a class="btn btn--block" data-link="phone" hidden>Позвонить</a>
-  <a class="btn btn--block" data-link="max" target="_blank" rel="noopener" hidden><img class="ico-msg ico-msg--sm" src="assets/img/icons/max.webp" width="20" height="20" alt="">Написать в MAX</a>
+  <div class="msg-row msg-row--menu"><a class="msg-btn msg-btn--lg" data-link="max" target="_blank" rel="noopener" aria-label="MAX" title="MAX" hidden><img src="assets/img/icons/max.webp" width="56" height="56" alt=""></a><a class="msg-btn msg-btn--lg" data-link="telegram" target="_blank" rel="noopener" aria-label="Telegram" title="Telegram" hidden><img src="assets/img/icons/telegram.webp" width="56" height="56" alt=""></a><a class="msg-btn msg-btn--lg" data-link="whatsapp" target="_blank" rel="noopener" aria-label="WhatsApp" title="WhatsApp" hidden><img src="assets/img/icons/whatsapp.webp" width="56" height="56" alt=""></a></div>
 </div>
 
 <main id="main">
@@ -107,7 +108,6 @@
       <ul class="benefits reveal">
         <li class="benefit benefit--gift"><span class="benefit__ico"><svg class="ico" aria-hidden="true"><use href="#i-gift"/></svg></span>4 точечных светильника в подарок при заказе потолка от 40&nbsp;м²</li>
         <li class="benefit benefit--sale"><span class="benefit__ico"><svg class="ico" aria-hidden="true"><use href="#i-percent"/></svg></span>Скидка 10% пенсионерам</li>
-        <li class="benefit"><span class="benefit__ico"><svg class="ico" aria-hidden="true"><use href="#i-receipt"/></svg></span>Цена по строкам: углы, трубы и свет видны в смете до договора</li>
         <li class="benefit"><span class="benefit__ico"><svg class="ico" aria-hidden="true"><use href="#i-ruler"/></svg></span>На замере мастер показывает образцы и объясняет разницу между видами</li>
       </ul>
 
@@ -116,11 +116,11 @@
         <a class="btn" href="#types">Смотреть виды потолков</a>
       </div>
 
-      <p class="hero__note reveal">Пять коротких шагов. Расчёт приходит в выбранный канал<span data-if="responseMinutes" hidden> в течение <span data-cfg="responseMinutes" data-unit="минуты|минут|минут"></span></span><span data-if="workHours" hidden> в рабочее время <span class="nowrap" data-cfg="workHours"></span></span>.</p>
-      <p class="hero__note reveal">
-        <span class="dotlist-label">Можно</span>
-        <span class="dotlist"><a data-link="phone" hidden>позвонить</a><a data-link="max" target="_blank" rel="noopener" hidden>написать в MAX</a><span>прислать план или смету другой компании</span></span>
-      </p>
+      <div class="hero__contacts reveal">
+        <a class="hero__phone" data-link="phone" hidden><svg class="ico" aria-hidden="true"><use href="#i-phone"/></svg><span data-cfg="phone"></span></a>
+        <span class="hero__contacts-sep" aria-hidden="true"></span>
+        <div class="msg-row"><a class="msg-btn msg-btn--md" data-link="max" target="_blank" rel="noopener" aria-label="MAX" title="MAX" hidden><img src="assets/img/icons/max.webp" width="56" height="56" alt=""></a><a class="msg-btn msg-btn--md" data-link="telegram" target="_blank" rel="noopener" aria-label="Telegram" title="Telegram" hidden><img src="assets/img/icons/telegram.webp" width="56" height="56" alt=""></a><a class="msg-btn msg-btn--md" data-link="whatsapp" target="_blank" rel="noopener" aria-label="WhatsApp" title="WhatsApp" hidden><img src="assets/img/icons/whatsapp.webp" width="56" height="56" alt=""></a></div>
+      </div>
     </div>
 
     <div class="hero__visual reveal">
@@ -138,44 +138,6 @@
         <div class="stat"><b>4,9</b><span>из 5,0, рейтинг в Яндекс Отзывах</span></div>
         <div class="stat"><b>0 ₽</b><span>замер бесплатный и ни к чему не обязывает</span></div>
       </div>
-    </div>
-  </div>
-</section>
-
-<!-- ============================== АКЦИИ ============================== -->
-<section class="section section--alt" id="promo">
-  <div class="container">
-    <div class="section-head">
-      <div><div class="eyebrow">Акции</div><h2 class="h2">Выгода при заказе</h2></div>
-    </div>
-    <div class="promos">
-      <article class="promo promo--gift reveal">
-        <span class="promo__big">+4</span>
-        <h3 class="h3">Светильники в подарок</h3>
-        <p>При заказе потолка от 40&nbsp;м²: 4 точечных светильника.<span data-if="giftUntil" hidden> Действует до <span data-cfg="giftUntil"></span>.</span><span data-if="giftHoldDays" hidden> Подарок закрепляется за вами на <span data-cfg="giftHoldDays" data-unit="день|дня|дней"></span> после расчёта.</span></p>
-        <a class="link-arrow" href="#quiz">Рассчитать стоимость <svg class="ico" aria-hidden="true"><use href="#i-arrow"/></svg></a>
-      </article>
-      <article class="promo promo--sale reveal">
-        <span class="promo__big">−10%</span>
-        <h3 class="h3">Скидка 10% пенсионерам</h3>
-        <p>Скидка для пенсионеров.<span data-if="pensionerDetails" hidden> <span data-cfg="pensionerDetails"></span></span></p>
-        <a class="link-arrow" href="#quiz">Рассчитать стоимость <svg class="ico" aria-hidden="true"><use href="#i-arrow"/></svg></a>
-      </article>
-    </div>
-  </div>
-</section>
-
-<!-- ============================== ТРИ РЕШЕНИЯ ============================== -->
-<section class="section" id="solutions">
-  <div class="container">
-    <div class="section-head">
-      <div><div class="eyebrow">Из чего состоит</div><h2 class="h2">Потолок складывается из трёх решений</h2></div>
-      <p class="lead">Выберите вид потолка, остальное мастер уточнит на замере и покажет образцы.</p>
-    </div>
-    <div class="solutions">
-      <div class="solution reveal"><span class="solution__n">01</span><h3 class="h3">Полотно</h3><p>Матовое, глянцевое, сатиновое, тканевое. От полотна зависит, как потолок выглядит и какой у него блеск.</p></div>
-      <div class="solution reveal"><span class="solution__n">02</span><h3 class="h3">Конструкция</h3><p>Один уровень, два уровня, парящий, теневой профиль. Конструкция задаёт форму потолка.</p></div>
-      <div class="solution reveal"><span class="solution__n">03</span><h3 class="h3">Свет и оформление</h3><p>Светильники, подсветка, трековые системы, карнизы, рисунок на полотне.</p></div>
     </div>
   </div>
 </section>
@@ -220,7 +182,7 @@
       </article>
 
       <article class="type-card reveal">
-        <div class="type-card__img"><div class="tex tex-fabric" role="img" aria-label="Фактура тканевого полотна"></div></div>
+        <div class="type-card__img"><img src="assets/img/thumbs/2.webp" width="720" height="480" alt="Потолок из тканевого полотна с подсветкой по периметру" loading="lazy"></div>
         <div class="type-card__body">
           <h3 class="h3">Тканевое полотно</h3>
           <p>Тканевая основа, монтаж без нагрева полотна. Подходит, когда нужен именно такой монтаж.</p>
@@ -270,8 +232,102 @@
   </div>
 </section>
 
+<!-- ============================== ЗАМЕР ============================== -->
+<section class="section" id="measure">
+  <div class="container measure">
+    <div class="measure__photo reveal"><img id="measure-photo" src="portfolio/5447264050829009542.jpg" width="1280" height="960" alt="Помещение, в котором будет монтаж потолка" loading="lazy"></div>
+    <div class="measure__body reveal">
+      <div class="eyebrow">Замер</div>
+      <h2 class="h2">Замер бесплатный и ни к чему не обязывает</h2>
+      <ul class="checks">
+        <li><svg class="ico" aria-hidden="true"><use href="#i-check"/></svg>Мастер приезжает с образцами полотен.</li>
+        <li><svg class="ico" aria-hidden="true"><use href="#i-check"/></svg>Показывает, чем отличаются виды потолков, и помогает выбрать.</li>
+        <li><svg class="ico" aria-hidden="true"><use href="#i-check"/></svg>Называет, на сколько потолок снизит высоту комнаты.</li>
+        <li><svg class="ico" aria-hidden="true"><use href="#i-check"/></svg>Выезжаем по Москве и МО.</li>
+      </ul>
+      <a class="btn btn--primary" href="#quiz">Рассчитать стоимость</a>
+    </div>
+  </div>
+</section>
+
+<!-- ============================== НАШИ РАБОТЫ ============================== -->
+<section class="section section--alt" id="works">
+  <div class="container">
+    <div class="section-head">
+      <div><div class="eyebrow">Портфолио</div><h2 class="h2">Наши работы по видам</h2></div>
+      <p class="lead">Только настоящие работы компании. Нажмите на проект, чтобы открыть все фото.</p>
+    </div>
+    <div class="filters" id="filters" role="group" aria-label="Фильтр работ"></div>
+    <div class="works" id="works-grid"></div>
+
+  </div>
+</section>
+
+<!-- ============================== ОТЗЫВЫ ============================== -->
+<section class="section" id="reviews-section">
+  <div class="container">
+    <div class="section-head">
+      <div><div class="eyebrow">Отзывы</div><h2 class="h2">Отзывы клиентов</h2></div>
+      <p class="lead">Оценки и отзывы из Яндекса.</p>
+    </div>
+    <div class="reviews reveal" id="reviews">
+      <div>
+        <div class="reviews__score">
+          <div class="reviews__num">4,9<small> / 5,0</small></div>
+          <div class="stars" aria-hidden="true">
+            <svg class="ico ico--fill"><use href="#i-star"/></svg><svg class="ico ico--fill"><use href="#i-star"/></svg><svg class="ico ico--fill"><use href="#i-star"/></svg><svg class="ico ico--fill"><use href="#i-star"/></svg><svg class="ico ico--fill"><use href="#i-star"/></svg>
+          </div>
+        </div>
+        <p class="reviews__txt">Рейтинг в Яндекс Отзывах</p>
+        <p style="margin-top:18px"><a class="btn btn--sm" data-link="yandexReviews" target="_blank" rel="noopener" hidden>Читать отзывы <svg class="ico" aria-hidden="true"><use href="#i-ext"/></svg></a></p>
+      </div>
+      <div class="reviews__embed" id="reviews-embed">
+        <div class="dev-note" data-dev-note>Здесь будет вставка с кодом от сервиса, который загружает отзывы из Яндекса. Код виджета указывается в файле assets/js/config.js (поле reviewsWidget).</div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ============================== АКЦИИ ============================== -->
+<section class="section section--alt" id="promo">
+  <div class="container">
+    <div class="section-head">
+      <div><div class="eyebrow">Акции</div><h2 class="h2">Выгода при заказе</h2></div>
+    </div>
+    <div class="promos">
+      <article class="promo promo--gift reveal">
+        <span class="promo__big">+4</span>
+        <h3 class="h3">Светильники в подарок</h3>
+        <p>При заказе потолка от 40&nbsp;м²: 4 точечных светильника.<span data-if="giftUntil" hidden> Действует до <span data-cfg="giftUntil"></span>.</span><span data-if="giftHoldDays" hidden> Подарок закрепляется за вами на <span data-cfg="giftHoldDays" data-unit="день|дня|дней"></span> после расчёта.</span></p>
+        <a class="link-arrow" href="#quiz">Рассчитать стоимость <svg class="ico" aria-hidden="true"><use href="#i-arrow"/></svg></a>
+      </article>
+      <article class="promo promo--sale reveal">
+        <span class="promo__big">−10%</span>
+        <h3 class="h3">Скидка 10% пенсионерам</h3>
+        <p>Скидка для пенсионеров.<span data-if="pensionerDetails" hidden> <span data-cfg="pensionerDetails"></span></span></p>
+        <a class="link-arrow" href="#quiz">Рассчитать стоимость <svg class="ico" aria-hidden="true"><use href="#i-arrow"/></svg></a>
+      </article>
+    </div>
+  </div>
+</section>
+
+<!-- ============================== ТРИ РЕШЕНИЯ ============================== -->
+<section class="section" id="solutions">
+  <div class="container">
+    <div class="section-head">
+      <div><div class="eyebrow">Из чего состоит</div><h2 class="h2">Потолок складывается из трёх решений</h2></div>
+      <p class="lead">Выберите вид потолка, остальное мастер уточнит на замере и покажет образцы.</p>
+    </div>
+    <div class="solutions">
+      <div class="solution reveal"><span class="solution__n">01</span><h3 class="h3">Полотно</h3><p>Матовое, глянцевое, сатиновое, тканевое. От полотна зависит, как потолок выглядит и какой у него блеск.</p></div>
+      <div class="solution reveal"><span class="solution__n">02</span><h3 class="h3">Конструкция</h3><p>Один уровень, два уровня, парящий, теневой профиль. Конструкция задаёт форму потолка.</p></div>
+      <div class="solution reveal"><span class="solution__n">03</span><h3 class="h3">Свет и оформление</h3><p>Светильники, подсветка, трековые системы, карнизы, рисунок на полотне.</p></div>
+    </div>
+  </div>
+</section>
+
 <!-- ============================== ЦЕНА ============================== -->
-<section class="section" id="price">
+<section class="section section--alt" id="price">
   <div class="container">
     <div class="section-head">
       <div><div class="eyebrow">Цена</div><h2 class="h2">Цена от 1100&nbsp;₽/м², итог считается по строкам</h2></div>
@@ -320,24 +376,6 @@
   </div>
 </section>
 
-<!-- ============================== ЗАМЕР ============================== -->
-<section class="section section--alt" id="measure">
-  <div class="container measure">
-    <div class="measure__photo reveal"><img id="measure-photo" src="portfolio/5447264050829009542.jpg" width="1280" height="960" alt="Помещение, в котором будет монтаж потолка" loading="lazy"></div>
-    <div class="measure__body reveal">
-      <div class="eyebrow">Замер</div>
-      <h2 class="h2">Замер бесплатный и ни к чему не обязывает</h2>
-      <ul class="checks">
-        <li><svg class="ico" aria-hidden="true"><use href="#i-check"/></svg>Мастер приезжает с образцами полотен.</li>
-        <li><svg class="ico" aria-hidden="true"><use href="#i-check"/></svg>Показывает, чем отличаются виды потолков, и помогает выбрать.</li>
-        <li><svg class="ico" aria-hidden="true"><use href="#i-check"/></svg>Называет, на сколько потолок снизит высоту комнаты.</li>
-        <li><svg class="ico" aria-hidden="true"><use href="#i-check"/></svg>Выезжаем по Москве и МО.</li>
-      </ul>
-      <a class="btn btn--primary" href="#quiz">Рассчитать стоимость</a>
-    </div>
-  </div>
-</section>
-
 <!-- ============================== ЗАЩИТА ============================== -->
 <section class="section" id="protect">
   <div class="container">
@@ -370,36 +408,8 @@
   </div>
 </section>
 
-<!-- ============================== НАШИ РАБОТЫ ============================== -->
-<section class="section" id="works">
-  <div class="container">
-    <div class="section-head">
-      <div><div class="eyebrow">Портфолио</div><h2 class="h2">Наши работы по видам</h2></div>
-      <p class="lead">Только настоящие работы компании. Нажмите на проект, чтобы открыть все фото.</p>
-    </div>
-    <div class="filters" id="filters" role="group" aria-label="Фильтр работ"></div>
-    <div class="works" id="works-grid"></div>
-
-    <div class="reviews reveal" id="reviews">
-      <div>
-        <div class="reviews__score">
-          <div class="reviews__num">4,9<small> / 5,0</small></div>
-          <div class="stars" aria-hidden="true">
-            <svg class="ico ico--fill"><use href="#i-star"/></svg><svg class="ico ico--fill"><use href="#i-star"/></svg><svg class="ico ico--fill"><use href="#i-star"/></svg><svg class="ico ico--fill"><use href="#i-star"/></svg><svg class="ico ico--fill"><use href="#i-star"/></svg>
-          </div>
-        </div>
-        <p class="reviews__txt">Рейтинг в Яндекс Отзывах</p>
-        <p style="margin-top:18px"><a class="btn btn--sm" data-link="yandexReviews" target="_blank" rel="noopener" hidden>Читать отзывы <svg class="ico" aria-hidden="true"><use href="#i-ext"/></svg></a></p>
-      </div>
-      <div class="reviews__embed" id="reviews-embed">
-        <div class="dev-note" data-dev-note>Здесь будет вставка с кодом от сервиса, который загружает отзывы из Яндекса. Код виджета указывается в файле assets/js/config.js (поле reviewsWidget).</div>
-      </div>
-    </div>
-  </div>
-</section>
-
 <!-- ============================== ВИДЕО ============================== -->
-<section class="section section--alt" id="video">
+<section class="section" id="video">
   <div class="container">
     <div class="section-head">
       <div><div class="eyebrow">Видео</div><h2 class="h2">Монтаж и результат на объектах</h2></div>
@@ -410,7 +420,7 @@
 </section>
 
 <!-- ============================== МАСТЕРА И ТВ ============================== -->
-<section class="section" id="team">
+<section class="section section--alt" id="team">
   <div class="container">
     <div class="section-head">
       <div><div class="eyebrow">Команда</div><h2 class="h2">Мастера, которые делают монтаж</h2></div>
@@ -435,7 +445,7 @@
 </section>
 
 <!-- ============================== СОМНЕНИЯ ============================== -->
-<section class="section section--alt" id="faq">
+<section class="section" id="faq">
   <div class="container">
     <div class="section-head">
       <div><div class="eyebrow">Частые сомнения</div><h2 class="h2">Частые сомнения</h2></div>
@@ -452,7 +462,7 @@
 </section>
 
 <!-- ============================== КВИЗ ============================== -->
-<section class="section" id="quiz">
+<section class="section section--alt" id="quiz">
   <div class="container quiz-wrap">
     <div class="reveal">
       <div class="eyebrow">Расчёт</div>
@@ -475,13 +485,10 @@
       <div class="eyebrow">Контакты</div>
       <h2 class="h2">Цена вашего потолка<span data-if="responseMinutes" hidden> за <span class="accent" data-cfg="responseMinutes" data-unit="минуту|минуты|минут"></span></span><span data-if="workHours" hidden> в рабочее время</span></h2>
       <p class="lead">Светильники в подарок, замер бесплатный, цена в договоре меняется только с вашего согласия.</p>
-      <div class="contact-list" id="contact-list" hidden>
-        <a class="contact-link" data-link="phone" hidden><span><small>Телефон</small><b data-cfg="phone"></b></span><svg class="ico" aria-hidden="true"><use href="#i-phone"/></svg></a>
-        <a class="contact-link" data-link="max" target="_blank" rel="noopener" hidden><span><small>MAX</small><b>Написать в MAX</b></span><img class="ico-msg" src="assets/img/icons/max.webp" width="28" height="28" alt=""></a>
-        <a class="contact-link" data-link="telegram" target="_blank" rel="noopener" hidden><span><small>Telegram</small><b>Написать в Telegram</b></span><img class="ico-msg" src="assets/img/icons/telegram.webp" width="28" height="28" alt=""></a>
-        <a class="contact-link" data-link="whatsapp" target="_blank" rel="noopener" hidden><span><small>WhatsApp</small><b>Написать в WhatsApp</b></span><img class="ico-msg" src="assets/img/icons/whatsapp.webp" width="28" height="28" alt=""></a>
-        <a class="contact-link" data-link="vk" target="_blank" rel="noopener" hidden><span><small>ВКонтакте</small><b>Сообщество ВК</b></span><svg class="ico" aria-hidden="true"><use href="#i-ext"/></svg></a>
-        <a class="contact-link" data-link="email" hidden><span><small>E-mail</small><b data-cfg="email"></b></span><svg class="ico" aria-hidden="true"><use href="#i-mail"/></svg></a>
+      <div class="contact-box" id="contact-list" hidden>
+        <a class="contact-phone" data-link="phone" hidden><small>Телефон</small><b data-cfg="phone"></b></a>
+        <div class="msg-row"><a class="msg-btn msg-btn--lg" data-link="max" target="_blank" rel="noopener" aria-label="MAX" title="MAX" hidden><img src="assets/img/icons/max.webp" width="56" height="56" alt=""></a><a class="msg-btn msg-btn--lg" data-link="telegram" target="_blank" rel="noopener" aria-label="Telegram" title="Telegram" hidden><img src="assets/img/icons/telegram.webp" width="56" height="56" alt=""></a><a class="msg-btn msg-btn--lg" data-link="whatsapp" target="_blank" rel="noopener" aria-label="WhatsApp" title="WhatsApp" hidden><img src="assets/img/icons/whatsapp.webp" width="56" height="56" alt=""></a></div>
+        <a class="contact-mail" data-link="email" hidden><small>E-mail</small><b data-cfg="email"></b></a>
       </div>
     </div>
 
@@ -536,11 +543,9 @@
 <div class="fab" id="fab">
   <button class="fab__up" id="fab-up" type="button" aria-label="Наверх"><svg class="ico" aria-hidden="true"><use href="#i-up"/></svg></button>
   <div class="fab__menu" id="fab-menu" hidden>
-    <a data-link="phone" hidden><svg class="ico" aria-hidden="true"><use href="#i-phone"/></svg>Позвонить</a>
-    <a data-link="max" target="_blank" rel="noopener" hidden><img class="ico-msg ico-msg--sm" src="assets/img/icons/max.webp" width="20" height="20" alt="">Написать в MAX</a>
-    <a data-link="telegram" target="_blank" rel="noopener" hidden><img class="ico-msg ico-msg--sm" src="assets/img/icons/telegram.webp" width="20" height="20" alt="">Написать в Telegram</a>
-    <a data-link="whatsapp" target="_blank" rel="noopener" hidden><img class="ico-msg ico-msg--sm" src="assets/img/icons/whatsapp.webp" width="20" height="20" alt="">Написать в WhatsApp</a>
-    <a href="#quiz" data-fab-quiz><svg class="ico" aria-hidden="true"><use href="#i-ruler"/></svg>Рассчитать стоимость</a>
+    <a class="fab__item fab__item--phone" data-link="phone" hidden aria-label="Позвонить" title="Позвонить"><svg class="ico" aria-hidden="true"><use href="#i-phone"/></svg></a>
+    <a class="msg-btn fab__item" data-link="max" target="_blank" rel="noopener" aria-label="MAX" title="MAX" hidden><img src="assets/img/icons/max.webp" width="56" height="56" alt=""></a><a class="msg-btn fab__item" data-link="telegram" target="_blank" rel="noopener" aria-label="Telegram" title="Telegram" hidden><img src="assets/img/icons/telegram.webp" width="56" height="56" alt=""></a><a class="msg-btn fab__item" data-link="whatsapp" target="_blank" rel="noopener" aria-label="WhatsApp" title="WhatsApp" hidden><img src="assets/img/icons/whatsapp.webp" width="56" height="56" alt=""></a>
+    <a class="fab__item fab__item--calc" href="#quiz" data-fab-quiz aria-label="Рассчитать стоимость" title="Рассчитать стоимость"><svg class="ico" aria-hidden="true"><use href="#i-ruler"/></svg></a>
   </div>
   <button class="fab__btn" id="fab-btn" type="button" aria-label="Связаться с нами" aria-expanded="false" aria-controls="fab-menu"><svg class="ico" aria-hidden="true"><use href="#i-chat"/></svg></button>
 </div>
