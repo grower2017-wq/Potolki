@@ -29,3 +29,10 @@ Options -Indexes
   ExpiresByType text/css "access plus 1 week"
   ExpiresByType application/javascript "access plus 1 week"
 </IfModule>
+
+# Принудительный HTTPS: уберите «#» в начале строк, когда на домене включён SSL-сертификат.
+# <IfModule mod_rewrite.c>
+#   RewriteEngine On
+#   RewriteCond %{HTTPS} off
+#   RewriteRule ^ https://%{HTTP_HOST}%{REQUEST_URI} [L,R=301]
+# </IfModule>

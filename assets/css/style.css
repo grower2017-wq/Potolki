@@ -991,3 +991,9 @@ svg.ico--fill { fill: currentColor; stroke: none; }
 .team-grid .master__img img { object-position: 50% 20%; }
 .reviews__embed { min-width: 0; }
 @media (min-width: 760px) { .team-grid { grid-template-columns: repeat(2, minmax(0, 1fr)); max-width: 680px; gap: 24px; } }
+
+/* ---------- Иконки мессенджеров ---------- */
+.ico-msg { width: 28px; height: 28px; flex: none; border-radius: 50%; }
+.ico-msg--sm { width: 20px; height: 20px; }
+.contact-link .ico-msg { width: 30px; height: 30px; }
+.fab__menu a .ico-msg { width: 20px; height: 20px; }
